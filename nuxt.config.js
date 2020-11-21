@@ -38,7 +38,7 @@ export default {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: ((process.env.BASE_URL = "development") ? 'https://us-central1-nest8-bdce1.cloudfunctions.net/app' : 'https://us-central1-nest8-bdce1.cloudfunctions.net/app' ), // Used as fallback if no runtime config is provided
+    baseURL: ((process.env.BASE_URL) ? process.env.BASE_URL : 'https://us-central1-nest8-bdce1.cloudfunctions.net/app' ), // Used as fallback if no runtime config is provided
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
